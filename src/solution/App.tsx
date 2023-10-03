@@ -4,6 +4,9 @@ import { Canvas } from "@react-three/fiber";
 import { XR, Controllers, Hands, VRButton } from "@react-three/xr";
 import { OrbitControls } from "@react-three/drei";
 import BarChart from "./BarChart";
+import { useEffect, useState } from "react";
+import Model from "./Model";
+import Chart from "./Chart";
 
 const App = () => {
   return (
@@ -15,19 +18,11 @@ const App = () => {
           <Controllers />
           <Hands />
           <ambientLight />
-          <pointLight position={[1, 1, 1]} />
+          <pointLight position={[0, 1, -2]} intensity={10} />
 
-          <group position={[0, 0, -3]}>
-            <BarChart
-              data={[
-                { key: "A", value: Math.random() * 100 },
-                { key: "B", value: Math.random() * 100 },
-                { key: "C", value: Math.random() * 100 },
-                { key: "D", value: Math.random() * 100 },
-                { key: "E", value: Math.random() * 100 },
-              ]}
-            />
-          </group>
+          <Model scale={0.2} position={[0, 0, -2]} />
+
+          <Chart position={[-0.5, 0.5, -3]} scale={0.1} />
         </XR>
       </Canvas>
     </div>
