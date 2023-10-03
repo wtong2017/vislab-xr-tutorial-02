@@ -22,14 +22,16 @@ export default function Bar({ x, y, width, height, value }: BarProp) {
   };
 
   return (
-    <Interactive onHover={() => onHovered()} onBlur={() => onUnhovered()}>
-      <mesh position={[x, y, 0]}>
-        <boxGeometry args={[width, height, 0.1]} />
-        <meshStandardMaterial color={hovered ? "red" : "blue"} />
-      </mesh>
+    <>
+      <Interactive onHover={() => onHovered()} onBlur={() => onUnhovered()}>
+        <mesh position={[x, y, 0]}>
+          <boxGeometry args={[width, height, 0.1]} />
+          <meshStandardMaterial color={hovered ? "red" : "blue"} />
+        </mesh>
+      </Interactive>
       <Text position={[x, height + 0.1, 0]} color="black" visible={hovered}>
         {value}
       </Text>
-    </Interactive>
+    </>
   );
 }
