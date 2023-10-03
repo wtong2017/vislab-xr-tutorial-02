@@ -9,7 +9,7 @@ We will implement a 3D bar chart in WebXR.
 ## Prerequisites
 
 1. [Node.js](https://nodejs.org/en/download/)
-2. [Yarn](https://classic.yarnpkg.com/en/docs/install/#windows-stable)
+2. [Pnpm](https://pnpm.io/installation)
 3. [Git](https://git-scm.com/downloads)
 4. [Visual Studio Code](https://code.visualstudio.com/download)
 5. [WebXR API Emulator](https://chrome.google.com/webstore/detail/webxr-api-emulator/mjddjgeghkdijejnciaefnkjmkafnnje?hl=en)
@@ -38,13 +38,13 @@ git clone
 2. Install dependencies
 
 ```bash
-yarn
+pnpm install
 ```
 
 3. Start the development server
 
 ```bash
-yarn dev
+pnpm run dev
 ```
 
 4. Open the application in your browser
